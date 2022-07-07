@@ -21,10 +21,10 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo "This wont't fail, watch out for the next"
+      - run: exit 1
       - run:
-          name: echo "Failure test"
-          command: curl lkjfonfosnfon
-          when: on_fail
+          name: on error
+          command: echo "Hello Error!"
+          #when: on_fail
           
             
