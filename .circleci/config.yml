@@ -24,5 +24,6 @@ jobs:
       - run: echo "This wont't fail, watch out for the next"
       - run:
           name: echo "Failure test"
-          command: curl lkjfonfosnfon 
+          command: curl lkjfonfosnfon
+          when: on_fail
             
