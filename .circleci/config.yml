@@ -26,5 +26,5 @@ jobs:
           name: echo "Failure test"
           command: curl lkjfonfosnfon
           when: on_fail
-          - run: echo "The job failed, recheck your command"
+          
             
