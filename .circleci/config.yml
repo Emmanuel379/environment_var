@@ -4,6 +4,7 @@ workflows:
   test-env-vars:
     jobs:
       - build
+      - failure_test
 
 jobs:
   build:
@@ -15,3 +16,13 @@ jobs:
           name: "echo an env var that is part of our project"
           command: |
             echo $MY_ENV_VAR
+            
+  failure_test:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo "This wont't fail, watch out for the next"
+      - run:
+          name: echo "Failure test"
+          command: curl lkjfonfosnfon 
+            
