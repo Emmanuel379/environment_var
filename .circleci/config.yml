@@ -25,6 +25,6 @@ jobs:
       - run:
           name: on error
           command: echo "Hello Error!"
-          #when: on_fail
+          when: on_fail
           
             
